@@ -1,0 +1,59 @@
+/* Reset CSS - baseado no reset do Andy Bell */
+
+/* Remove margin e padding padrão */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove comportamento padrão de listas */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Define o html com scroll-behavior suave */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Define corpo com altura mínima e melhor tipografia */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove estilos padrão de elementos de mídia */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove estilos padrão de input e botões */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove animações para usuários que as desabilitaram */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
